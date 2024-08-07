@@ -1,10 +1,15 @@
-# calculadora
-#calculadora
+   def limpar_resultado(self):
+        self.resultado = 0
 
-def sum(a, b):
-    return (a + b)
-
-a = int(input('Enter 1st number: '))
-b = int(input('Enter 2nd number: '))
-
-print(f'Sum of {a} and {b} is {sum(a, b)}')
+    def calcular(self, operacao, valor):
+        self.limpar_resultado()
+        if operacao == 'adicionar':
+            return self.adicionar(valor)
+        elif operacao == 'subtrair':
+            return self.subtrair(valor)
+        elif operacao == 'multiplicar':
+            return self.multiplicar(valor)
+        elif operacao == 'dividir':
+            return self.dividir(valor)
+        else:
+            return "Operação inválida"
